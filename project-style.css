@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    background-color: #1C1C1C;
+}
+section{
+    padding: 100px 200px;
+}
+.abtme{
+    position: relative;
+    background:#FDF3C0;
+    display: inline-block;
+    color:black;
+    margin-top: 20px ;
+    padding: 10px 30px ;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;    
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 40px 65px;
+    z-index: 1000;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    
+
+}
+header .logo{
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header ul li{
+    position: relative;
+    list-style: none;
+
+} 
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.top_container{
+    height: 85vh;
+    width: 80%;
+    box-shadow: rgba(100,100,111, 0.2) 0px 7px 29px 0px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: 9%;
+    margin-top: 200px;
+    
+}
+
+.top_container h2{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.top_container h2 span{
+    font-size: 1.5em;
+    font-weight: 700;   
+}
+.top_container h3{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+    
+}
+.top_container img{
+    height: 80vh;
+    margin-top: 20px;
+    background-color: none;
+ 
+}
+button{
+    color: white;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+}
