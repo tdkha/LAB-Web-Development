@@ -18,20 +18,20 @@
         </div>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About </a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#About">About </a></li>
+            <li><a href="#Project">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
         </ul>
     </header>
     
-    <section class="top_container">
+    <section class="top_container" >
         <div class="textBanner">
             <h2>Hello, I'm <br><span>Kayden</span></h2>
-            <a href="#" class="abtme">About me</a>
+            <a href="#About" class="abtme">About me</a>
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="About">
         <div class="heading">
             <h2>About me</h2>
         </div>
@@ -66,7 +66,7 @@
     </section>
     
     <section>
-    <div class="heading">
+    <div class="heading" id="Project">
         <h2>Projects</h2>
     </div>
     <div class="cards">
@@ -92,7 +92,7 @@
         <div class="card">
             <img src="hinhanh/javascriptimage.png" class="card-image">
             <div class="card-content">
-                <h3 class="card-title">JavaScript</h3>
+                <a href="project.html"><h3 class="card-title">JavaScript</h3></a>
             </div>
             <div class="card-user">
                 <div class="card-user-info">
@@ -117,7 +117,7 @@
         <div>
             <table class="calculator">
                 <tr>
-                    <td colspan = "3"> <input class = "display-box" type = "text" id = "result"> </td>
+                    <td colspan = "3"> <input class = "display-box" type = "text" id = "result" disabled> </td>
                     <td><input class="Button" type="button" onclick="clearScreen()" value="C"></td>
                 </tr>
                 <tr>
@@ -147,14 +147,48 @@
             </td>
             </table>
         </div>
+
+        <div>
+            <table class="calculator-evaluate">
+                <tr>
+                    <td colspan="2"><input type="text" class="display-box2" id = "result2" disabled></td>
+                </tr>
+                <tr>
+                    <td><input class="Button-check" type="button" onclick="Evaluator()" value="check"></td>
+                    <td><input class="Button-clear" type="button" onclick="ClearScreen2()" value="C"></td>
+                </tr>
+            </table>
+        </div>
     </section>
 
+    <section id="Contact">
+    <div class="heading">
+        <h2>Contact Infomation</h2>
+    </div>
+    </section>
 
-
-    <section id="ContactSec">
-        <div class="heading">
-            <h2>Contact Infomation</h2>
-        </div>
+    <div class="Contact-Sec">
+        
+            <div class="profile-card">
+                <div class="profile-card-header">
+                    <div class="profile-card-avatar">
+                        <img src="/hinhanh/hoodie (1)-modified.png" alt="user-img">
+                    </div>
+    
+                    <div class="profile-name"><h1>Tieu Duy Kha</h1></div>
+    
+                    <div class="profile-role">Newbie Developer</div>
+    
+                    <div class="profile-card-footer">
+                        <div class="social-button">
+                            <button><ion-icon name="logo-instagram"></ion-icon></button>
+                            <button><ion-icon name="logo-facebook"></ion-icon></button>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        
         <div class="ContactBox">
             <form action=""></form>
             <fieldset>
@@ -180,7 +214,7 @@
                 <input type="submit">
             </fieldset>
         </div>
-    </section>
+    </div>
 </body>
 
 
