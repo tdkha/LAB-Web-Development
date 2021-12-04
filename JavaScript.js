@@ -43,12 +43,50 @@ function loopTask1(){
 } 
 
 function factorialize() {
-    let num = prompt("Enter words:");
-    if (num < 0) 
-          alert(-1);
-    else if (num == 0) 
-        alert (1);
-    else {
-        alert( (num * factorialize(num - 1)));
+    let num = prompt("Enter a number:");
+    var firstNum = num
+    if (num == 1 || num==0){
+        alert("The factorial is 1");
+    }else if (num>=1){
+        for (let i = num-1; i >=1; i --){
+            num = num *i;
+         }
+         alert("The factorial of " + firstNum + " is " + num);
+    }else{
+        alert('Invalid Input')
     }
   }
+  
+function valueN(){
+    let number = parseInt(prompt('Enter a number: '));
+    let sum = 0;
+    if (number >= 1){
+        for (let i = 0; i <= number; i++){
+            sum += i
+        }
+        alert(sum)
+    }else{
+        alert('Invalid Input!')
+    }
+}
+function isOdd(n){
+    return Boolean(n % 2 );
+}
+
+function OddandEven(){
+    let number = parseInt(prompt('Enter a number:'));
+    let sumOdd = 0;
+    let sumEven = 0;
+    for(let i =0; i<=number;i++){
+        if(isOdd(i)){
+            sumOdd += i;
+        }
+    }
+
+    for (let a = 0; a<=number;a++){
+        if(number % 2 == 0){
+            sumEven += a;
+        }
+    }
+    alert('Sum of even is: '+sumEven +'\n' +'Sum of odd is: '+sumOdd);
+}
