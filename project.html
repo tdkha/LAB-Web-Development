@@ -24,20 +24,75 @@
                 <li><a href="#Contact">Contact</a></li>
             </ul>
         </header>
-        <section class="top_container" >
-            <div class="textBanner">
-                <h2>There are <br><span>JavaScript Projects</span></h2>
-                <a href="#" class="abtme">Let's go</a>
+        <section class="outer_top_container">
+            <section class="top_container" >
+                <div class="textBanner">
+                    <h2>There are <br><span>JavaScript Projects</span></h2>
+                    <a href="#firstProject" class="abtme">Let's go</a>
+                </div>
+                <div>
+                    <img src="hinhanh/javascript-creator.png" alt="javascript-creator">
+                </div>
+            </section>
+        
+        <section>
+            <div class="heading" id="firstProject">
+                <h2>Fractorialize</h2>
             </div>
-            <div>
-                <img src="hinhanh/javascript-creator.png" alt="javascript-creator">
+
+            <div class="Fractorialize-content">
+                <div class="Fractorialize-contentbox">
+                    <h2>What is fractorial ?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                    <input type="button" class="Button" onclick="factorialize()" value="Click me">
+                </div>
+
+                <div class="Fractorialize-pic">
+                   <img src="/hinhanh/giphy.gif" alt="">
+                </div>
             </div>
         </section>
 
         <section>
-            <button type="button" onclick="factorialize()"></button>
-            
-        </section>
+            <div class="heading">
+                <h2>Calculating</h2>
+            </div>
+            <div>
+                <table class="calTable">
+                    <tr>
+                        <td>Sum of continuous numbers</td>
+                        <td><input type="button" class="calButton" onclick="valueN()" value="Click me"></td>
+                    </tr>
+                    <tr>
+                        <td>Sum of continuous numbers</td>
+                        <td><input type="button" class="calButton" onclick="OddandEven()" value="Click me"></td>
+                    </tr>
+                </table>
+                
+        
+        </section>)
 
+        <section>
+            <div class="heading" id="firstProject">
+                <h2>Google Map</h2>
+            </div>
+        
+            <div id="googleMap"></div>
+        </section>
+        
+        
+        <script>
+        function myMap() {
+        var mapProp= {
+          center:new google.maps.LatLng(51.508742,-0.120850),
+          zoom:5,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+        </script>
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACgo898LLP-K9tkZ2WeDFw14ePzMmv-iI&callback=myMap"></script>
+        
+        
 
 </html>
