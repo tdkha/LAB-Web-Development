@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins',sans-serif;
-    background-color: #1C1C1C;
+   
 }
 section{
     padding: 100px 200px;
+    background-color: #1C1C1C;
 }
 .abtme{
     position: relative;
@@ -19,7 +20,7 @@ section{
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
-    font-weight: 500;    
+    font-weight: 500;   
 }
 header{
     position: fixed;
@@ -31,6 +32,7 @@ header{
     display: flex;
     justify-content:space-between;
     align-items: center;
+    background-color: #1C1C1C;
     
 
 }
@@ -62,6 +64,23 @@ header ul li a{
     letter-spacing: 2px;
     font-weight: 500;
 }
+.heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color:white
+}
+.heading h2{
+    font-weight: 600;
+    font-size: 35px;
+
+
+}
+
+.outer_top_container{
+    padding: 30px 0px;
+    background-color: #1C1C1C;
+}
 .top_container{
     height: 85vh;
     width: 80%;
@@ -76,8 +95,9 @@ header ul li a{
     padding-right: 5%;
     box-sizing: border-box;
     position: relative;
-    margin-left: 9%;
+    margin-left: 10%;
     margin-top: 200px;
+    margin-bottom: 100px;
     
 }
 
@@ -103,9 +123,83 @@ header ul li a{
     background-color: none;
  
 }
-button{
+
+.Fractorialize-content{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Fractorialize-contentbox h2{
+    font-size: 30px;
+    margin-bottom: 10px;
     color: white;
-    width: 50px;
+}
+.Fractorialize-contentbox p{
+    margin-bottom: 30px;
+    color: white;
+}
+.Fractorialize-contentbox{
+    position: relative;
+    margin-top: 80px;
+}
+.Fractorialize-pic{
+    min-width: 50%;
+}
+.Fractorialize-pic img{
+    width: 104%;
+    height: 90%;
+    border-radius: 10px;
+    margin-left: 35px;
+    margin-top: 32px;
+    
+}
+.Button {
+    font-family: 'Poppins', sans-serif;
+    width: 180px;
     height: 50px;
-    background-color: white;
+    padding: 0;
+    margin: auto;
+    box-sizing: border-box;
+    background: #FDF3C0;
+    border: none;
+    font-size: 25px;
+    line-height: 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    color:black;
+    cursor: pointer;
+    
+   }
+.calTable{
+    padding: 10px;
+    border-radius: 1em;
+    height: 180px;
+    width: 450px;
+    margin: auto;
+    background-color: #1C1C1C;
+    box-shadow: rgba(100,100,111, 0.2) 0px 7px 50px 0px;
+    color: white;
+    font-size: 20px;
+}
+.calButton{
+    font-family: 'Poppins', sans-serif;
+    width: 100px;
+    height: 30px;
+    padding: 0;
+    margin: auto;
+    box-sizing: border-box;
+    background: #FDF3C0;
+    border: none;
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    color:black;
+    cursor: pointer;
+}
+#googleMap{
+    width:100%;
+    height:400px;
+    text-decoration: none;
 }
