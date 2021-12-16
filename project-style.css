@@ -203,3 +203,79 @@ header ul li a{
     height:400px;
     text-decoration: none;
 }
+
+.ID-checker{
+    padding: 10px;
+    border-radius: 1em;
+    height: 100px;
+    width: 400px;
+    margin: auto;
+    background-color: #1C1C1C;
+    box-shadow: #FDF3C0 0px 5px 10px 0px;
+    justify-content: center;
+    margin-top: 80px;
+}
+.id-display-box{
+        font-family: 'Poppins', sans-serif;
+        background-color: #C0C0C0;
+        border: black 0.5px;
+        color: black;
+        border-radius: 5px;
+        width: 90%;
+        height: 65%;
+        text-align: right;
+        font-size: 30px;
+        margin-left: 20px;
+}
+.id-Button{
+    font-family: 'Poppins', sans-serif;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: auto;
+    box-sizing: border-box;
+    background: #FDF3C0;
+    border: none;
+    font-size: 18px;
+    border-radius: 50px;
+    font-weight: 500;
+    color:black;
+    cursor: pointer;
+    justify-content: center;
+    margin-right: 20px;
+}
+.ID-checker2{
+    padding: 10px;
+    border-radius: 1em;
+    height: 200px;
+    width: 400px;
+    margin: auto;   
+    background-color: #1C1C1C;
+    box-shadow: #FDF3C0 0px 7px 30px 0px;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    color: #FDF3C0;
+    text-align: right;
+   
+}
+
+.id-secdisplay-box{
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    border: black 0.5px;
+    color: black;
+    border-radius: 5px;
+    width: 180px;
+    height: 25px;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+
+}
+.id-container{
+    padding: 100px 200px;
+    background-color: #1C1C1C;
+    display: flex;
+    justify-content: space-between;
+}
