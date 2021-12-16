@@ -57,7 +57,6 @@
             <div class="heading">
                 <h2>Calculating</h2>
             </div>
-            <div>
                 <table class="calTable">
                     <tr>
                         <td>Sum of continuous numbers</td>
@@ -91,11 +90,53 @@
                         <td><input type="button" class="calButton" onclick="Palindrome()" value="Click me"></td>
                     </tr>
                 </table>
-                
-        
+        </section>     
+
+        <section class="id-container">
+            <div>
+                <div class="heading">
+                    <h2>ID Checker</h2>
+                </div>
+                <table class="ID-checker">
+                    <tr>
+                        <td><input type="text" id="id-display" class="id-display-box"></td>
+                        <td><input type="button" class="id-Button2" onclick="clear()" value="C"></td>
+                        <td><ion-icon name="arrow-forward-outline" class="id-Button1" onclick="intCalc()"></ion-icon></td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <div class="heading">
+                    <h2>ID Info</h2>
+                </div>
+                <table class="ID-checker2">
+                    <tr>
+                        <td>Sex :</td>
+                        <td><input type="text" id="sex" class="id-secdisplay-box" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Age :</td>
+                        <td><input type="text" id="age" class="id-secdisplay-box" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Birthday :</td>
+                        <td><input type="text" id="birthday" class="id-secdisplay-box" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Specific Day :</td>
+                        <td colspan="3"><input type="text" id="spe-day" class="id-secdisplay-box" disabled></td>
+                    </tr>
+                </table>
+            </div>
         </section>
 
         <section>
+            <iframe id="mapFrame" src="https://www.google.com/map?q=Yliopistokatu36Lappeenranta&output=embed" width="50%" height="300px" frameBorder="0"></iframe>
+        </section>
+
+        <section>
+    
             <div class="heading" id="firstProject">
                 <h2>Google Map</h2>
             </div>
