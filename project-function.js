@@ -1,160 +1,176 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Kayden CV</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="project-style.css">
-        <link rel="icon" href="hinhanh\man.png">
-        <link rel="preconnect" href="">
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <script src="project-function.js"></script>
-        
-    </head>
-    <body>
-        <header>
-            <div class="wrapper">
-                    <a href="#" class="logo">Portfolio</a>
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#About">About </a></li>
-                <li><a href="#Project">Projects</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
-        </header>
-        <section class="outer_top_container">
-            <section class="top_container" >
-                <div class="textBanner">
-                    <h2>There are <br><span>JavaScript Projects</span></h2>
-                    <a href="#firstProject" class="abtme">Let's go</a>
-                </div>
-                <div>
-                    <img src="hinhanh/javascript-creator.png" alt="javascript-creator">
-                </div>
-            </section>
-        
-        <section>
-            <div class="heading" id="firstProject">
-                <h2>Fractorialize</h2>
-            </div>
-
-            <div class="Fractorialize-content">
-                <div class="Fractorialize-contentbox">
-                    <h2>What is fractorial ?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-                    <input type="button" class="Button" onclick="factorialize()" value="Click me">
-                </div>
-
-                <div class="Fractorialize-pic">
-                   <img src="/hinhanh/giphy.gif" alt="">
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="heading">
-                <h2>Calculating</h2>
-            </div>
-                <table class="calTable">
-                    <tr>
-                        <td>Sum of continuous numbers</td>
-                        <td><input type="button" class="calButton" onclick="valueN()" value="Click me"></td>
-                    </tr>
-                    <tr>
-                        <td>Sum of odd and even numbers</td>
-                        <td><input type="button" class="calButton" onclick="OddandEven()" value="Click me"></td>
-                    </tr>
-                </table>
-                
-        
-        </section>
-
-        <section>
-            <div class="heading">
-                <h2>String Handling</h2>
-            </div>
-            <div>
-                <table class="calTable">
-                    <tr>
-                        <td>Find letter in string</td>
-                        <td><input type="button" class="calButton" onclick="letterFind()" value="Click me"></td>
-                    </tr>
-                    <tr>
-                        <td>Find vowels in string</td>
-                        <td><input type="button" class="calButton" onclick="vowelFind()" value="Click me"></td>
-                    </tr>
-                    <tr>
-                        <td>Panlindrome</td>
-                        <td><input type="button" class="calButton" onclick="Palindrome()" value="Click me"></td>
-                    </tr>
-                </table>
-        </section>     
-
-        <section class="id-container">
-            <div>
-                <div class="heading">
-                    <h2>ID Checker</h2>
-                </div>
-                <table class="ID-checker">
-                    <tr>
-                        <td><input type="text" id="id-display" class="id-display-box"></td>
-                        <td><ion-icon name="arrow-forward-outline" class="id-Button" onclick="intCalc()"></ion-icon></td>
-                    </tr>
-                </table>
-            </div>
-            <div>
-                <div class="heading">
-                    <h2>ID Info</h2>
-                </div>
-                <table class="ID-checker2">
-                    <tr>
-                        <td>Sex :</td>
-                        <td><input type="text" id="sex" class="id-secdisplay-box" disabled></td>
-                    </tr>
-                    <tr>
-                        <td>Age :</td>
-                        <td><input type="text" id="age" class="id-secdisplay-box" disabled></td>
-                    </tr>
-                    <tr>
-                        <td>Birthday :</td>
-                        <td><input type="text" id="birthday" class="id-secdisplay-box" disabled></td>
-                    </tr>
-                    <tr>
-                        <td>Specific Day :</td>
-                        <td colspan="3"><input type="text" id="spe-day" class="id-secdisplay-box" disabled></td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-
-        <section>
-            <iframe id="mapFrame" src="https://www.google.com/map?q=Yliopistokatu36Lappeenranta&output=embed" width="50%" height="300px" frameBorder="0"></iframe>
-        </section>
-
-        <section>
-    
-            <div class="heading" id="firstProject">
-                <h2>Google Map</h2>
-            </div>
-        
-            <div id="googleMap"></div>
-        </section>
-        
-        
-        <script>
-        function myMap() {
-        var mapProp= {
-          center:new google.maps.LatLng(51.508742,-0.120850),
-          zoom:5,
-        };
-        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+function factorialize() {
+    let num = prompt("Enter a number:");
+    var firstNum = num
+    if (num == 1 || num==0){
+        alert("The factorial is 1");
+    }else if (num>=1){
+        for (let i = num-1; i >=1; i --){
+            num = num *i;
+         }
+         alert("The factorial of " + firstNum + " is " + num);
+    }else{
+        alert('Invalid Input')
+    }
+  }
+  
+function valueN(){
+    let number = parseInt(prompt('Enter a number: '));
+    let sum = 0;
+    if (number >= 1){
+        for (let i = 0; i <= number; i++){
+            sum += i
         }
-        </script>
-        
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACgo898LLP-K9tkZ2WeDFw14ePzMmv-iI&callback=myMap"></script>
-        
-        
+        alert(sum)
+    }else{
+        alert('Invalid Input!')
+    }
+}
+function isOdd(n){
+    return Boolean(n % 2 );
+}
 
-</html>
+function OddandEven(){
+    let number = parseInt(prompt('Enter a number:'));
+    let sumOdd = 0;
+    let sumEven = 0;
+    for(let i =0; i<=number;i++){
+        if(isOdd(i)){
+            sumOdd += i;
+        }
+    }
+
+    for (let a = 0; a<=number;a++){
+        if(number % 2 == 0){
+            sumEven += a;
+        }
+    }
+    alert('Sum of even is: '+sumEven +'\n' +'Sum of odd is: '+sumOdd);
+}
+
+function letterFind(){
+    const letterInput = prompt("Please enter your string:")
+    const Lletter = /[L]/gi;
+    const letterFound = letterInput.match(Lletter); 
+    const count = letterFound.length;
+    alert(letterInput+" contains "+count+" "+"L") 
+}
+
+function vowelFind(){
+    const vowelInput = prompt("Please enter your string:")
+    const vowels = /[A,E,I,O,U]/gi;
+    const vowelFound = vowelInput.match(vowels); 
+    const count = vowelFound.length;
+    alert(vowelInput+" contains "+count+" "+"vowels")
+}
+
+function Palindrome(){
+    let isPalindrome = true;
+    let orgpInput = prompt("Please enter your string:");
+    let pInput = orgpInput.toLocaleLowerCase().trim();
+    for(let i = 0 , j = pInput.length; i <= j ; i++ , j--){
+        if(pInput[i] != pInput[j-1]){
+            isPalindrome = false;
+            break   
+        }
+    }
+
+    if (!isPalindrome){
+        alert('This is not a Palindrome')
+    }else{
+    alert('This is a palindrome')
+    }
+}
+//131052-308T//
+function Remove(input){
+    ouput = input.replace(/\.\,\//g,"");
+}
+
+function lengthCheck(input){
+    let ouput = input.length;
+    if(ouput != 11 ){
+        alert('Invalid Input')
+    }
+}
+
+function  intCalc(){
+    
+    let userInt =  document.getElementById("id-display").value;
+
+    Remove(userInt);
+    lengthCheck(userInt);
+    let gender = userInt.slice(7,10);
+    let birthday = userInt.slice(0,7);
+    let dob = userInt.slice(4,6)+"-"+userInt.slice(2,4)+"-"+userInt.slice(0,2)
+
+    
+
+    let removedStr = userInt.replace(userInt.slice(6,7),"");
+    let middleStr = userInt.slice(6,7);
+    if (middleStr !== "-" && middleStr !="A" && middleStr != "+"){
+        alert("Invalid")
+    }
+
+    let firstStr =  Number(removedStr.slice(0,9));
+    let dividedStr = firstStr/31;
+    let decimal = dividedStr - Math.floor(dividedStr);
+    let multipliedStr = decimal*31;
+    let finalNum = Math.round(multipliedStr);
+    let lastChar = removedStr.charAt(removedStr.length -1);
+    let values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "H", "J", "K", "L", "M", "N", "P", "R", "S", "T", "U", "V", "W", "X", "Y"];
+    let control = values[finalNum];
+    if (lastChar == control){
+        document.getElementById("id-display").value = "True"
+        Sex(gender);
+        Age(dob);
+        ageArrange(birthday,middleStr);
+
+    }else{
+        document.getElementById("id-display").value = "Wrong"
+    }
+}
+
+function Sex(input){
+    if (isOdd(input)){
+        document.getElementById("sex").value = "Male";
+    }else{
+        document.getElementById("sex").value = "Female";
+    }
+}
+function ageArrange(input,yearControl){
+    let day = input.slice(0,2);
+    let month = input.slice(2,4);
+    let year = input.slice(4,6);
+    let date = year+month+day;
+    if(yearControl == "A"){
+        date = day +"-"+ month+"-" + "20"+year;
+    }else if(yearControl == "+"){
+        date = day +"-"+ month+"-" + "18"+year
+    }else{
+        date = day +"-"+ month+"-" + "19"+year
+    }
+    document.getElementById("birthday").value = date;
+}
+
+function Age(input){
+    let date1 = new Date(input);
+    let date2 = new Date(); //current day
+
+    // difference in time
+    let differenceInTime = date2.getTime()-date1.getTime();
+
+    //convert mili to days
+    let differenceInDays = Math.round(Math.abs((differenceInTime/(3600*1000*24))));
+
+    // convert days to years
+    let ageYears = differenceInDays/365;
+    let ageMonths = (ageYears-parseInt(ageYears))*12;
+    let tmp = parseInt(ageMonths);
+    let ageDays = (ageMonths-parseInt(ageMonths))*30; 
+    document.getElementById("spe-day").value = "D:"+differenceInDays+" Y:"+parseInt(ageYears)+" M:"+parseInt(ageMonths);
+    document.getElementById("age").value = Math.round(ageYears);
+}
+
+function clear(){
+    document.getElementById("id-display").value = "";
+    document.getElementById("sex").value = "";
+}
