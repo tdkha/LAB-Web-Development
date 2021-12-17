@@ -82,13 +82,14 @@ function Palindrome(){
 }
 //131052-308T//
 function Remove(input){
-    ouput = input.replace(/\.\,\//g,"");
+    ouput = input.replace(/[\.\,\ ]/g,"");
+    return ouput;
 }
 
 function lengthCheck(input){
     let ouput = input.length;
     if(ouput != 11 ){
-        alert('Invalid Input')
+        alert('Invalid Length')
     }
 }
 
@@ -96,7 +97,7 @@ function  intCalc(){
     
     let userInt =  document.getElementById("id-display").value;
 
-    Remove(userInt);
+    userInt = Remove(userInt);
     lengthCheck(userInt);
     let gender = userInt.slice(7,10);
     let birthday = userInt.slice(0,7);
@@ -106,10 +107,7 @@ function  intCalc(){
 
     let removedStr = userInt.replace(userInt.slice(6,7),"");
     let middleStr = userInt.slice(6,7);
-    if (middleStr !== "-" && middleStr !="A" && middleStr != "+"){
-        alert("Invalid")
-    }
-
+    centuryCheck(middleStr);
     let firstStr =  Number(removedStr.slice(0,9));
     let dividedStr = firstStr/31;
     let decimal = dividedStr - Math.floor(dividedStr);
@@ -128,7 +126,11 @@ function  intCalc(){
         document.getElementById("id-display").value = "Wrong"
     }
 }
-
+function centuryCheck(input){
+    if (input !== "-" && input !="A" && input != "+"){
+        alert("Century Unavailable")
+    }
+}
 function Sex(input){
     if (isOdd(input)){
         document.getElementById("sex").value = "Male";
@@ -170,7 +172,21 @@ function Age(input){
     document.getElementById("age").value = Math.round(ageYears);
 }
 
-function clear(){
-    document.getElementById("id-display").value = "";
+function clearScreen(){
+    document.getElementById("id-display").value= "";
     document.getElementById("sex").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("birthday").value = "";
+    document.getElementById("spe-day").value = "";
+}
+
+// gg map
+function gMap(){
+    let street = document.getElementById("streetName").value;
+    let city = document.getElementById("cityName").value;
+
+    let address = street + city;
+
+    let mapScr ="https://www.google.com/maps?q=" + address + "&output=embed";
+    document.getElementById("mapFrame").src = mapScr;
 }
