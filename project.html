@@ -100,7 +100,7 @@
                 <table class="ID-checker">
                     <tr>
                         <td><input type="text" id="id-display" class="id-display-box"></td>
-                        <td><input type="button" class="id-Button2" onclick="clear()" value="C"></td>
+                        <td><input type="button" class="id-Button2" onclick="clearScreen()" value="C"></td>
                         <td><ion-icon name="arrow-forward-outline" class="id-Button1" onclick="intCalc()"></ion-icon></td>
                         
                     </tr>
@@ -131,32 +131,36 @@
             </div>
         </section>
 
-        <section>
-            <iframe id="mapFrame" src="https://www.google.com/map?q=Yliopistokatu36Lappeenranta&output=embed" width="50%" height="300px" frameBorder="0"></iframe>
-        </section>
-
-        <section>
-    
-            <div class="heading" id="firstProject">
-                <h2>Google Map</h2>
+        <section class=gg-map-section>
+            <div>
+                <div class="gg-map-container">
+                    <iframe id="mapFrame" src="https://www.google.com/maps?q=Yliopistokatu36Lappeenranta&output=embed" frameBorder="0"></iframe>
+                </div>
             </div>
-        
-            <div id="googleMap"></div>
+
+            <div>
+                <div class="heading" id="firstProject">
+                    <h2>Google Map</h2>
+                </div>
+                <div>
+                    <table id="addressSearch">
+                        <tr>
+                            <td>Street:</td>
+                            <td><input type="text" id="streetName" class="gg-map-input"></td>
+                        </tr>
+                        <tr>
+                            <td>City:</td>
+                            <td><input type="text" id="cityName" class="gg-map-input"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="button" id="searchButton" class="searchbutton" onclick="gMap()" value="Enter"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </section>
         
         
-        <script>
-        function myMap() {
-        var mapProp= {
-          center:new google.maps.LatLng(51.508742,-0.120850),
-          zoom:5,
-        };
-        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-        }
-        </script>
-        
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACgo898LLP-K9tkZ2WeDFw14ePzMmv-iI&callback=myMap"></script>
-        
-        
-
+       
 </html>
