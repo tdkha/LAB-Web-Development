@@ -200,7 +200,7 @@ header ul li a{
 }
 
 iframe {
-    width: 550px;
+    width: 500px;
     height: 300px;
     border-radius: 5px;
 }
@@ -303,7 +303,7 @@ iframe {
     padding: 100px 200px;
     background-color: #1C1C1C;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #addressSearch{
     padding: 10px;
@@ -315,8 +315,27 @@ iframe {
     color: #FDF3C0;
     font-size: 20px;
 }
+
 .gg-map-input{
     border-radius: 5px;
     border: none;
     margin-left: 10px;
+}
+.searchbutton{
+    font-family: 'Poppins', sans-serif;
+    width: 100px;
+    height: 30px;
+    padding: 0;
+    margin: auto;
+    box-sizing: border-box;
+    background: #FDF3C0;
+    border: none;
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    color:black;
+    cursor: pointer;
+    margin-left: 45px;
+    
 }
